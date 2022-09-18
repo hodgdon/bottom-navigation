@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/b"
+    app:startDestination="@+id/b1">
+
+    <fragment
+        android:id="@+id/b1"
+        android:name="com.hodgdon.nav.ui.home.NavFragment"
+        android:label="B1" >
+        <argument
+            android:name="destination"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="B1" />
+        <action
+            android:id="@+id/action_b1_to_b2"
+            app:destination="@id/b2" />
+    </fragment>
+    <fragment
+        android:id="@+id/b2"
+        android:name="com.hodgdon.nav.ui.home.NavFragment"
+        android:label="B2" >
+        <argument
+            android:name="destination"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="B2" />
+        <action
+            android:id="@+id/action_b2_to_b3"
+            app:destination="@id/b3" />
+    </fragment>
+    <fragment
+        android:id="@+id/b3"
+        android:name="com.hodgdon.nav.ui.home.NavFragment"
+        android:label="B3" >
+        <argument
+            android:name="destination"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="B3" />
+    </fragment>
+    <action android:id="@+id/action_global_b1" app:destination="@id/b1"/>
+    <action android:id="@+id/action_global_b2" app:destination="@id/b2"/>
+    <action android:id="@+id/action_global_b3" app:destination="@id/b3"/>
+
+
+    <include app:graph="@navigation/d"/>
+</navigation>
